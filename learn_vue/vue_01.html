@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="https://www.pornhub.com">{{ message }}</a>
+        <span>{{ hello }}</span>
+        <hr>
+        <a v-bind:href="url">戳你有惊喜</a>
+        <hr>
+        <span v-bind:title="showtime">鼠标放在这里</span>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: '点我',
+    hello: '你好',
+    url: 'https://www.baidu.com',
+    showtime: 'local time' + new Date().toLocaleString()
+  }
+})
+</script>
+</html>

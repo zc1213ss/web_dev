@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 定义数组
+        var aArray1 = new Array(1, 2, 3);
+        console.log(aArray1);
+        // 字面量方式创建，相当于直接赋值一个数组，数组的表现方式是一对中括号
+        var aArray2 = [3, 6, 9];
+        console.log(aArray2);
+        // 多维数组
+        var aArray3 = [[1, 2, 4], [2, 3, 4], [6, 7, 8]];
+        console.log(aArray3);
+        // 根据下标获取数据
+        alert(aArray3[0][1]);
+        // 演示数组相关操作
+        var aArray4 = [3, 6, 9];
+        // 获取数组的个数
+        alert(aArray4.length);
+        // 根据下标取值
+        alert(aArray4[2]);
+        // 根据下标修改数据
+        aArray4[1] = 26;
+        console.log(aArray4);
+        // 追加数据
+        aArray4.push("hello");
+        console.log(aArray4);
+        // 删除最后一个元素, pop不支持下标删除元素
+        var oValue = aArray4.pop()
+        console.log(oValue);
+        console.log(aArray4);
+        // 插入数据
+        // 1. 开始删除的索引
+        // 2. 删除的个数
+        // 3. 插入的数据
+        aArray4.splice(1, 0, '苹果');
+        console.log(aArray4);
+        // 从下标2删除2个数据
+        aArray4.splice(2, 2);
+        console.log(aArray4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

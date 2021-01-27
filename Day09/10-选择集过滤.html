@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            // 通过jquery选择器获取html的标签
+            var $divs = $("div");
+            // 获取包含有指定选择器的父标签
+            $divs.has(".pname").css({"background": "red"});
+            // 根据下标选择器指定的标签
+            $divs.eq(1).css({"background": "blue"});
+
+            // 选择集过滤就是在选中的集合标签里，根据需要过滤出来自己想要的标签
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p class="pname">哈哈</p>
+    </div>
+    <div>
+        <input type="button" value="按钮">
+    </div>
+</body>
+</html>

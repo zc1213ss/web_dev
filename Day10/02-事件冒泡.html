@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 事件冒泡，事件会一级一级往上（父控件）传递 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            // 获取标签
+            var $btn = $("#btn1");
+            $btn.click(function(){
+                alert("我是按钮");
+                return false;
+            });
+            // 扩展：取消事件冒泡，就是不然事件向父级传递
+            // 默认事件冒泡
+            var $div = $("#id1");
+            $div.click(function() {
+                alert("我是div")
+            });
+
+            // 通过事件代理，让父控件代理子控件的事件，然后执行子控件相关的操作
+            var $ul = $("div ul");
+            $ul.delegate("li", "click", function() {
+                $(this).css({"color": "red"});
+            });
+
+            // 扩展: 可以代理不同子控件的事件
+            var $div1 = $("#box");
+            // 可以代理不同子控件的事件，多个选择器之间使用逗号分割即可
+            $div1.delegate("#p2, #btn2", "click", function(){
+                alert("ok");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p id="p1">哈哈</p>
+        <input type="button" value="按钮" id="btn1">
+        <ul>
+            <li>哈哈</li>
+            <li>嘻嘻</li>
+            <li>美吱吱</li>
+        </ul>
+    </div>
+    <div id="box">
+        <p id="p2">哈哈</p>
+        <input type="button" value="按钮" id="btn2">
+    </div>
+    
+</body>
+</html>

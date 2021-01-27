@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 定义一个标签，需要给一个标签添加id -->
+    <div id="app">
+        <span>{{ message }}</span>
+        <hr>
+        <a href="#" v-if="isLogin">超人归来</a>
+        <hr>
+        <a href="#" v-if="level === 1">青铜</a>
+        <!-- v-if, v-else 两行需要紧挨着 -->
+        <a href="#" v-else-if="level === 2">金刚</a>
+        <a href="#" v-else>王者</a>
+
+        <hr>
+        <span v-if="seen">v-if</span><br>
+        <span v-show="seen">v-show</span>
+
+    </div>
+</body>
+<!-- 3. 创建vue实例 -->
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'jello',
+            isLogin: false,
+            level: 2,
+            seen: true,
+        }
+    })
+</script>
+</html>

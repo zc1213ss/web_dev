@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 自定义JavaScript对象有两种方式
+        // 1.使用顶级类型object创建自定义对象
+        var oPerson = new Object();
+        // 添加属性
+        oPerson.name = "李四";
+        oPerson.age = 20;
+        // 添加方法
+        oPerson.show = function(){
+            alert("我是一个好人");
+        };
+        // 通过对象获取属性和调用方法
+        alert(oPerson.name);
+        oPerson.show();
+        // 2. 使用字面量创建自定义对象
+        var oStudent = {
+            // 属性
+            name: "万物",
+            age: 20,
+            // 方法
+            show:function(){
+                alert("我是一个好学生");
+            }
+        }
+        // 通过对象获取属性和调用方法
+        alert(oStudent.name + oPerson.age);
+        oStudent.show()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

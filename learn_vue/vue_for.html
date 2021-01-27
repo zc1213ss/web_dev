@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 定义一个标签，需要给一个标签添加id -->
+    <div id="app">
+        <ul>
+            <li v-for="item in items">{{ item }}</li>
+            <li v-for="(item, index) in items">{{ index+1 }}-->>{{ item }}</li>
+        </ul>
+        <br>
+        <ul>
+            <li v-for="(value, key) in object"{{ value }}</li>
+        </ul>
+    </div>
+</body>
+<!-- 3. 创建vue实例 -->
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            items: ['python', 'mysql', 'css', 'html', 'linux', 'AI'],
+            object: {
+                title: 'How to do make you',
+                author: 'Qiqil',
+                release: '2020-01-20'
+            }
+        }
+    })
+</script>
+</html>

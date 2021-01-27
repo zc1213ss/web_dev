@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 组选择器就是多个选择器的组合，把功能的代码可以放到组选择器里面 */
+        /* 这里表示的意思是定义了三个类选择器， 他们都有同样的样式规则 */
+        .box1, .box2, .box3{
+            width: 100px;
+            height: 100px;
+        }
+        /* 提示：在css里面出现同样的选择器，后面的不会覆盖前面的，后面的选择器会在前面的选择器基础上进行追加样式 */
+        .box1{
+            background: blue;
+        }
+        .box2{
+            background: green;
+        }
+        .box{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box1*3: 创建三个div并且指定class属性的名字是box1 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

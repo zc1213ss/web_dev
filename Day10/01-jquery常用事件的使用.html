@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        // 等页面加载完成以后获取标签元素
+        $(function() {
+            // 获取ul中的所有li标签
+            var $lis = $("ul li");
+            // 获取button标签
+            var $btn = $("#btn1");
+            // 获取text标签
+            var $text = $("#txt1")
+            // 获取div标签
+            var $div = $("div")
+            // 添加点击事件
+            $lis.click(function(){
+                // 获取当前点击的标签对象
+                // 原声js写法
+                // this.style.color="red";
+            // jquery写法
+                $(this).css({"color": "red"});
+            // 获取点击标签的索引
+                alert($(this).index());
+            });
+
+            // 获取文本框内容
+            $btn.click(function(){
+                alert($text.val());
+            });
+            // 给text文本框添加获取焦点事件
+            $text.focus(function(){
+                // 获取得到焦点的文本框,然后设置样式属性
+                $(this).css({"background": "red"});
+            });
+            // 给text文本框添加失去焦点事件
+            $text.blur(function(){
+                $(this).css({"background":"white"});
+            });
+            // 给div设置鼠标悬停（进入）事件
+            $div.mouseover(function(){
+                $(this).css({"background": "green"});
+            });
+            $div.mouseout(function(){
+                $(this).css({"background": "white"});
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>苹果</li>
+            <li>栗子</li>
+            <li>香蕉</li>
+        </ul>
+        <input type="text" id="txt1">
+        <input type="button" id="btn1" value="你点我">
+    </div>
+
+</body>
+</html>

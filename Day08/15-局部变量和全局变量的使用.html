@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 局部变量：在函数内定义的变量叫做局部变量，只能在函数内部使用
+        function fnShow() {
+            // 局部变量
+            var iNum = 1;
+            alert("局部变量为:" + iNum);
+        }
+        // 调用函数
+        fnShow();
+        // 局部变量不能在函数外使用
+        // alert(iNum);
+
+        // 全局变量：在函数外定义的变量叫做全局变量，可以在不同函数内使用，并且不同函数内可以共享全局变量
+        var iNum1 = 1;
+
+        function fnModify() {
+            alert(iNum1);
+            // 修改全局变量
+            iNum1 = 3;
+            // ++ 等于 += 1
+            iNum1 ++ 
+            alert(iNum1);
+        }
+
+        fnModify();
+        // js可以将string与number直接相加
+        alert("函数外访问的全局变量:" + iNum1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

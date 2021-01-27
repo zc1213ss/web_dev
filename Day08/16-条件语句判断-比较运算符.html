@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var iNum = 5;
+        var iStr = "5";
+        // js里面，如果数字和字符串进行比较(==, >, <, >=, <=, !=)，会自动将字符串转化为数字类型，再进行比较
+        if(iNum == iStr) {
+            alert("条件成立");
+        }
+
+        if(iNum < iStr) {
+            alert("条件成立");
+        }
+        else {
+            alert("条件不成立");
+        }
+        
+        var iScore = 90;
+        if(iScore < 60) {
+            alert("不及格");
+        }
+        else if (iScore <= 70) {
+            alert("刚及格");
+        }
+        else if (iScore <= 80) {
+            alert("一般般");
+        }
+        else {
+            alert("优秀");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

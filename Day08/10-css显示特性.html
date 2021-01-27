@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* 把该标签隐藏， 且不占位置 */
+            display: none;
+        }
+        .box2 {
+            /* width: 100px;
+            height: 100px; */
+            background: red;
+            /* 即设置div的宽高有设置在一行显示， 可以通过浮动来完成 */
+            display: inline;
+        }
+        a {
+            /* 设置标签自己占一行，不和其他标签在一行显示 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        haha
+    </div>
+    <p>xixi</p>
+    <div class="box2">
+        haha1
+    </div>
+    <a href="https://www.baidu.com">baidu</a>
+</body>
+</html>

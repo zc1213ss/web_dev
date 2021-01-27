@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            // 获取标签对象
+            var $p = $("p");
+            alert($p.length);
+            // 通过jquery设置标签样式
+            $p.css({"color": "red"});
+
+            var $div = $(".div1");
+            alert($div.length);
+
+            var $id = $("#box1");
+            alert($id.length);
+
+            var h1 = $("div h1");
+            alert(h1.length);
+            // 属性选择器，现根据标签选择html标签，然后再根据属性值进行过滤标签
+            var $input = $("input[type=text]");
+            alert($input.length);
+            // 结论：jquery 选择器获取标签，和css选择器匹配标签的方式一样
+        });
+    </script>
+</head>
+<body>
+    <p>哈哈</p>
+    <div class="div1">hehe</div>
+    <div id="box1">xixi</div>
+    <div>
+        <h1>haha</h1>
+    </div>
+    <input type="text">
+    <input type="button">
+</body>
+</html>

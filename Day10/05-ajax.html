@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        // 向web服务器发送一个ajax请求，本质上是一个http请求
+        $.ajax({
+            // 请求的资源地址, 不指定ip地址和端口号表示请求的是自己的服务器资源数据
+            url: "data.json",
+            type: "GET",
+            // 指定对服务器数据的解析格式
+            dataType: "JSON",
+            // data: 表示发送给web服务器的参数
+            // 请求成功执行的回调函数
+            success: function(data){
+                console.log(data.name);
+                // 数据请求回来可以绑定给html中的某个标签控件，实现局部刷新
+            },
+            // 请求失败执行的回调函数
+            error: function(){
+                alert("网络异常");
+            },
+            // 是否使用异步，默认不指定表示是异步请求
+            async: true
+        });
+
+
+        // 发送get方式的ajax的简写方式
+        // 1. 请求地址
+        // 2. 请求传给web服务器的参数
+        // 3. 请求成功的回调函数
+        // 4. 返回数据的解析方式
+        // 5. error失败执行的回调函数
+        $.get("data.json", {"name": "ls"}, function(data){
+            // 如果按照json格式解析数据，js这块能得到一个JavaScript对象
+            alert(data.name);
+        }, "JSON").error(function(){
+            alert("网络异常, 请求失败");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

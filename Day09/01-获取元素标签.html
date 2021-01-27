@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // js的内置对象，html的文档对象
+        // 如果获取的对象是 null, 则表明标签获取失败
+        // function fnLoad() {
+        //     var oP = document.getElementById("p1");
+        //     alert(oP);
+        // }
+        // // 页面标签和数据都加载完成以后会触发onload事件
+        // window.onload = fnLoad;
+
+        // 匿名函数
+        window.onload = function() {
+            var oP = document.getElementById("p1");
+            alert(oP);
+        };
+    </script>
+</head>
+<body>
+    <p id="p1">哈哈，我是一个段落标签</p>
+</body>
+</html>
