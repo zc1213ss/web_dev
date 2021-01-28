@@ -15,7 +15,10 @@
         </ul>
         <br>
         <ul>
-            <li v-for="(value, key) in object"{{ value }}</li>
+            <li v-for="(value, key) in object">{{ key }}--{{ value }}</li>
+        </ul>
+        <ul>
+            <li v-for="todo in todos">{{todo.title}} -- {{todo.author}} -- {{todo.release}}</li>
         </ul>
     </div>
 </body>
@@ -29,7 +32,24 @@
                 title: 'How to do make you',
                 author: 'Qiqil',
                 release: '2020-01-20'
-            }
+            },
+            todos: [
+                {
+                    title: 'vue',
+                    author: 'Jane Doe',
+                    release: '2016-04-10'
+                },
+                {
+                    title: 'python',
+                    author: 'Guido',
+                    release: '1996-01-12'
+                },
+                {
+                    title: 'linux',
+                    author: 'linus',
+                    release: '1990-12-10'
+                }
+            ]
         }
     })
 </script>
