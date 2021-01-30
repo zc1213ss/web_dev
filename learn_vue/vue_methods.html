@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <span>{{ message }}</span>
+        <button v-on:click="login">登陆</button>
+        <br>
+        <a href="javascript:;" @click="register">注册</a>
+        <br>
+        <button @click="add(counter)">点击+1</button>
+    </div>
+</body>
+<!-- 3. 创建vue实例 -->
+<script type="text/javascript">
+    var vm = new Vue({
+        // 接管标签
+        el: '#app',
+        // 绑定数据
+        data: {
+            message: 'hello',
+            counter: 1,
+            total: 0,
+        },
+        // 方法
+        methods: {
+            login: function(){
+                alert("我被点击了")
+            },
+            register: function(){
+                alert("完成注册")
+            },
+            // this 表示当前的 vue 通过 this.total 来获取data中的变量
+            add: function(counter){
+                this.total += counter;
+                alert(this.total)
+            }
+        }
+})
+</script>
+</html>
